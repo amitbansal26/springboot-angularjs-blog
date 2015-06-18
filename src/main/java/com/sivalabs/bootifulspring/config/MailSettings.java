@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sivalabs.bootifulspring;
+package com.sivalabs.bootifulspring.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;

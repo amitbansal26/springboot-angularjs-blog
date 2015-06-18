@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.sivalabs.bootifulspring.MailSettings;
+import com.sivalabs.bootifulspring.config.MailSettings;
 
 /**
  * @author Siva

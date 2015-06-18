@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>BootifulSpring</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+	<link href="webjars/bootstrap/3.3.4/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="resources/css/styles.css" rel="stylesheet">
+    <link href="webjars/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="webjars/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="webjars/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="webjars/angularjs/1.3.15/angular.js"></script>
+    <script type="text/javascript" src="webjars/angularjs/1.3.15/angular-route.js"></script>
+    <script type="text/javascript" src="webjars/angularjs/1.3.15/angular-resource.js"></script>
+    <script type="text/javascript" src="webjars/angularjs/1.3.15/angular-messages.js"></script>
+    <script type="text/javascript" src="webjars/angularjs/1.3.15/angular-cookies.js"></script>
+    <script type="text/javascript" src="webjars/angular-ui-router/0.2.13/angular-ui-router.js"></script>
+    
+    <script type="text/javascript" src="resources/js/app.js"></script>
+    <script type="text/javascript" src="resources/js/Controllers.js"></script>
+    <script type="text/javascript" src="resources/js/Services.js"></script>
+    
+    
+  </head>
+
+  <body>
+
+     <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">BootifulSpring</a>
+        </div>
+        <div class="navbar-collapse collapse" ng-if="isUserLoggedIn()">          
+          <ul class="nav navbar-nav navbar-right">            
+            <li><a href="#/newpost"><i class="fa fa-pencil-square-o fa-lg"></i> New Post</a></li>
+            <li><a href="javascript:void(0)" ng-click="logout()"><i class="fa fa-sign-out fa-lg"></i> Logout</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <div class="container">
+    	<div class="row">
+    		<div class="col-md-12">
+    			<div ui-view></div>
+    		</div>
+    	</div>
+    	
+    </div>
+
+  </body>
+</html>
