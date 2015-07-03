@@ -54,6 +54,31 @@ public class BlogService
 		
 	public Comment createComment(Comment comment) {
 		return commentRepository.save(comment);
-	}	
-	
+	}
+
+	public void deletePost(Integer postId)
+	{
+		postRepository.delete(postId);
+	}
+
+	public Page<Comment> findComments(PostsRequestDTO request)
+	{
+		Sort sort = new Sort(Direction.DESC, "createdOn");
+		if(request.getPageNo() < 0){
+			request.setPageNo(0);
+		}
+		if(request.getPageSize() < 1) {
+			request.setPageSize(5);
+		}
+		Pageable pageable = new PageRequest(request.getPageNo(), request.getPageSize(), sort);
+		Page<Comment> pageData = commentRepository.findAll(pageable);
+		
+		return pageData;
+	}
+
+	public void deleteComment(Integer commentId)
+	{
+		commentRepository.delete(commentId);
+	}
+
 }

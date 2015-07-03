@@ -6,7 +6,6 @@ package com.sivalabs.blog.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
@@ -86,8 +85,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     	http
 	    	//.authorizeUrls()
 	        .authorizeRequests()
-	        .antMatchers("/","/about").permitAll()
-	        .antMatchers(HttpMethod.POST,"/api/posts/").hasRole("ADMIN")
+	        .antMatchers("/","/about","/contact").permitAll()
+	        .antMatchers("/api/admin/**").hasRole("ADMIN")
 	        .antMatchers("/admin/**").hasRole("ADMIN")
 	        //.anyRequest().authenticated()
 	        ;

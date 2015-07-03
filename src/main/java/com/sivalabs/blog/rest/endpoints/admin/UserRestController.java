@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.sivalabs.blog.rest.endpoints;
+package com.sivalabs.blog.rest.endpoints.admin;
 
 import java.util.Arrays;
 import java.util.List;

@@ -97,7 +97,13 @@ public class Comment implements Serializable
 	public void setUpdatedOn(Date updatedOn) {
 		this.updatedOn = updatedOn;
 	}
-
+	public String getContentPreview()
+	{
+		if(content == null || content.trim().length() <= 250){
+			return content;
+		}
+		return content.substring(0, 250).concat(" ...");
+	}
 	public Post getPost() {
 		return post;
 	}

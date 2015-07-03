@@ -1,10 +1,20 @@
 
+delete from tags;
 delete from comments;
 delete from posts;
 delete from users;
 
 insert into users(user_id, email, password, name, role) values(1,'admin@gmail.com','admin','Administrator','ROLE_ADMIN');
 insert into users(user_id, email, password, name, role) values(2,'siva@gmail.com','siva','Siva Prasad','ROLE_USER');
+
+insert into tags(tag_id, name, description) values
+(1,'Java','Java Programming Language'),
+(2,'Spring','Spring Framework'),
+(3,'JavaEE','Java Enterprise Edition'),
+(4,'Hibernate','Hibernate ORM Framework'),
+(5,'JPA','Java Persistence API'),
+(6,'AngularJS','Angular JS JavaScript Framework')
+;
 
 insert into posts(post_id, title, content, created_on, updated_on) values(1,'SpringBoot: Introducing SpringBoot','SpringBoot is a new spring portfolio project which takes opinionated view of building production-ready Spring applications by drastically reducing the amount of configuration required. Spring Boot is taking the convention over configuration style to the next level by registering the default configurations automatically based on the classpath libraries available at runtime.', '2014-06-20', null);
 insert into posts(post_id, title, content, created_on, updated_on) values(2,'Exporting Spring Data JPA Repositories as REST Services using Spring Data REST','Spring Data modules provides various modules to work with various types of datasources like RDBMS, NOSQL stores etc in unified way. In my previous article  SpringMVC4 + Spring Data JPA + SpringSecurity configuration using JavaConfig I have explained how to configure Spring Data JPA using JavaConfig.', '2014-06-25', null);

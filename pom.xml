@@ -27,7 +27,14 @@
 			<plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
+				<dependencies>
+					<dependency>
+						<groupId>org.springframework</groupId>
+						<artifactId>springloaded</artifactId>
+						<version>1.2.3.RELEASE</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 			<plugin>
 		        <groupId>org.codehaus.mojo</groupId>
 		        <artifactId>sonar-maven-plugin</artifactId>

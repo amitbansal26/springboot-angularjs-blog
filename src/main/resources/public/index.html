@@ -48,7 +48,8 @@
 					<li><a href="#/login" >Login</a></li>
 				</ul>
 				
-				<ul class="nav navbar-nav navbar-right" ng-if="isUserLoggedIn()">				
+				<ul class="nav navbar-nav navbar-right" ng-if="isUserLoggedIn()">
+					<li><a href="#/admin">Administration</a></li>
 					<li><a href="#/newpost">New Post</a></li>
 					<li><a href="" ng-click="logout()">Logout</a></li>
 				</ul>
@@ -60,10 +61,10 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-md-10" style="padding-right: 2px;">
-			<div ui-view=""></div>
+			<div class="col-md-12" style="padding-right: 2px;">
+				<div ui-view=""></div>
 			</div>
-			
+						
 		</div>
 	</div>
 
